@@ -1,36 +1,14 @@
+<!DOCTYPE html>
 <html>
 <head>
-<style>
-#container {
-  height: 100%;
-  display: flex;
-  /* overflow: auto; */
-}
-#sidebar {
-  height: 100%;
-  width: 18%;
-  /* overflow: auto; */
-}
-#sidebar ul li {
-  height: 60px;
-  margin: 10px 20px 10px -20px;
-  background-color: lightgrey;
-  font-size: 20px;
-  /* color: lightgrey; */
-  list-style: none;
-}
-#content {
-  height: 100%;
-  width: 82%;
-}
-</style>
+<link rel="stylesheet" type="text/css" href="jsMain.css">
+<link rel="stylesheet" type="text/css" href="hideScrollbar.css">
 </head>
 
 <div id="container">
 
 <div id="sidebar">
-  <ul>
-  </ul>
+  <ul></ul>
 </div><!--
 
 --><div id="content">
@@ -107,29 +85,6 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
-<script>
-
-$(document).ready(function() {
-
-    $("p").each(function(n){
-      $(this).attr("class", n);
-      $(this).prepend('<h1>'+n+'</h1>');
-      $('#sidebar ul').append('<li class="scroll'+n+'">'+n+'</li>');
-      $('li.scroll'+n).click(function() {
-        $('html, body').animate({
-          scrollTop: $('p.'+n).offset().top
-        },500);
-      });
-    });
-
-    $('#scrollTop').click(function() {
-      $('html, body').animate({
-        scrollTop: $('#top').offset().top
-      },500);
-    });
-
-});
-
-</script>
+<script src="js.js"></script>
 
 </html>

@@ -1,0 +1,31 @@
+#container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+#sidebar {
+  height: 100%;
+  width: 18%;
+  position: fixed;
+  top: 0; 
+  bottom: 0; 
+  left: 0; 
+  overflow: auto;
+}
+#sidebar ul li {
+  height: 60px;
+  margin: 10px 20px 10px -20px;
+  background-color: lightgrey;
+  font-size: 20px;
+  /* color: lightgrey; */
+  list-style: none;
+}
+#content {
+  height:100%;
+  width: 75%;
+  position: absolute;
+  right: 0; 
+  top: 0; 
+  padding-right: 50px;
+  padding-left: 20px;
+}
